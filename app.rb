@@ -1,13 +1,29 @@
 require 'sinatra'
 require 'csv'
 
+
+
+def make_header(x)
+  $i = 1
+  output = ""
+  while $i<=x
+    output += "<th><input type='text' name='users" + $i.to_s + "'></th>"
+    $i += 1
+  end
+  output
+end
+
+
+
 get '/' do
   erb :index
 end
 
 post '/' do
-   @name = params[:user_name]
-   @people = params[:users]
+   @numItems = params[:items].to_i
+   @numUsers = params[:users].to_i
+
+   erb :list
 
  end
 
