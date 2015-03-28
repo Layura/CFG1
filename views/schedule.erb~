@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Manager 2.0</title>
+</head>
+<body>
+  <h1>Event schedule</h1>
+
+  <table> <% @schedule.each do |row| %>
+    <tr> <% row.each do |entry| %>      
+    <td><%= entry %></td>
+    <% end %>
+      </tr>
+    <% end %>
+  </table>
+
+</body>
+</html>
