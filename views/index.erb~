@@ -10,7 +10,6 @@
     <form >
       <input type='text' name='user_name' placeholder='name'>
       <input type='text' name='no_of_user' placeholder='users'>
-      <input type='text' name='no_of_user' placeholder='users'>
 
       <p><a href='/list'>Try again.</a></p>
     </form>
