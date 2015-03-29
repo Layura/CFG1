@@ -13,7 +13,14 @@ def make_header(x)
   output
 end
 
-
+def number_field_tag(x)
+        options = options.stringify_keys
+        options["type"] ||= "number"
+        if range = options.delete("in") || options.delete("within")
+          options.update("min" => range.min, "max" => range.max)
+        end
+        text_field_tag(name, value, options)
+      end
 
 get '/' do
   erb :index
@@ -41,4 +48,3 @@ get '/result' do
 
   erb :result
 end
-
